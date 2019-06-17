@@ -1,0 +1,12 @@
+C:\Users\HOANG KHANG\Desktop\DoAnTN\DoAn\GUI\BUS\obj\Debug\BUS.Properties.Resources.resources
+C:\Users\HOANG KHANG\Desktop\DoAnTN\DoAn\GUI\BUS\obj\Debug\BUS.csproj.GenerateResource.Cache
+C:\Users\HOANG KHANG\Desktop\DoAnTN\DoAn\GUI\BUS\obj\Debug\BUS.csprojResolveAssemblyReference.cache
+C:\Users\HOANG KHANG\Desktop\DoAnTN\DoAn\GUI\BUS\bin\Debug\BUS.exe.config
+C:\Users\HOANG KHANG\Desktop\DoAnTN\DoAn\GUI\BUS\bin\Debug\BUS.exe
+C:\Users\HOANG KHANG\Desktop\DoAnTN\DoAn\GUI\BUS\bin\Debug\BUS.pdb
+C:\Users\HOANG KHANG\Desktop\DoAnTN\DoAn\GUI\BUS\bin\Debug\DAO.exe
+C:\Users\HOANG KHANG\Desktop\DoAnTN\DoAn\GUI\BUS\bin\Debug\DTO.exe
+C:\Users\HOANG KHANG\Desktop\DoAnTN\DoAn\GUI\BUS\bin\Debug\DAO.pdb
+C:\Users\HOANG KHANG\Desktop\DoAnTN\DoAn\GUI\BUS\bin\Debug\DTO.pdb
+C:\Users\HOANG KHANG\Desktop\DoAnTN\DoAn\GUI\BUS\obj\Debug\BUS.exe
+C:\Users\HOANG KHANG\Desktop\DoAnTN\DoAn\GUI\BUS\obj\Debug\BUS.pdb

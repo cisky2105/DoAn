@@ -1,0 +1,8 @@
+C:\Users\HOANG KHANG\Desktop\DoAnTN\DoAn\GUI\DTO\bin\Debug\DTO.exe.config
+C:\Users\HOANG KHANG\Desktop\DoAnTN\DoAn\GUI\DTO\bin\Debug\DTO.exe
+C:\Users\HOANG KHANG\Desktop\DoAnTN\DoAn\GUI\DTO\bin\Debug\DTO.pdb
+C:\Users\HOANG KHANG\Desktop\DoAnTN\DoAn\GUI\DTO\obj\Debug\DTO.Properties.Resources.resources
+C:\Users\HOANG KHANG\Desktop\DoAnTN\DoAn\GUI\DTO\obj\Debug\DTO.csproj.GenerateResource.Cache
+C:\Users\HOANG KHANG\Desktop\DoAnTN\DoAn\GUI\DTO\obj\Debug\DTO.exe
+C:\Users\HOANG KHANG\Desktop\DoAnTN\DoAn\GUI\DTO\obj\Debug\DTO.pdb
+C:\Users\HOANG KHANG\Desktop\DoAnTN\DoAn\GUI\DTO\obj\Debug\DTO.csprojResolveAssemblyReference.cache
