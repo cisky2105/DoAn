@@ -117,7 +117,7 @@
             // 
             this.btnTimKhachHang.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnTimKhachHang.BackgroundImage")));
             this.btnTimKhachHang.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnTimKhachHang.Location = new System.Drawing.Point(1086, 78);
+            this.btnTimKhachHang.Location = new System.Drawing.Point(1086, 75);
             this.btnTimKhachHang.Name = "btnTimKhachHang";
             this.btnTimKhachHang.Size = new System.Drawing.Size(44, 34);
             this.btnTimKhachHang.TabIndex = 21;
@@ -216,7 +216,7 @@
             // 
             // txtTenKhach
             // 
-            this.txtTenKhach.Location = new System.Drawing.Point(893, 78);
+            this.txtTenKhach.Location = new System.Drawing.Point(893, 75);
             this.txtTenKhach.Multiline = true;
             this.txtTenKhach.Name = "txtTenKhach";
             this.txtTenKhach.Size = new System.Drawing.Size(187, 34);
@@ -234,7 +234,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(677, 78);
+            this.label3.Location = new System.Drawing.Point(677, 75);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(187, 26);
             this.label3.TabIndex = 14;
@@ -272,7 +272,7 @@
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(754, 61);
+            this.label14.Location = new System.Drawing.Point(767, 42);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(246, 48);
             this.label14.TabIndex = 40;

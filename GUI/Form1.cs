@@ -19,9 +19,9 @@ namespace GUI
 
         private void mnQuanLySanPham_Click(object sender, EventArgs e)
         {
-            //panel1.Controls.Clear();
+            panel1.Controls.Clear();
             ucSanPham banhang = new ucSanPham();
-            //panel1.Controls.Add(banhang);
+            panel1.Controls.Add(banhang);
             
             banhang.Dock = DockStyle.Fill;
             banhang.BringToFront();
@@ -29,7 +29,12 @@ namespace GUI
 
         private void mnQuanLyNhanVien_Click(object sender, EventArgs e)
         {
+            panel1.Controls.Clear();
+            ucNhanVien banhang = new ucNhanVien();
+            panel1.Controls.Add(banhang);
 
+            banhang.Dock = DockStyle.Fill;
+            banhang.BringToFront();
         }
     }
 }

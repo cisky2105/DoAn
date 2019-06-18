@@ -247,9 +247,9 @@
             this.ClientSize = new System.Drawing.Size(1882, 953);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.menuStrip1);
-            this.IsMdiContainer = true;
             this.Name = "frmMain";
             this.Text = "Form1";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);

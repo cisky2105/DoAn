@@ -18,5 +18,32 @@ namespace BUS
         {
             return sp_DAO.DanhSachSanPham();
         }
+        public string LayMaSPTiepTheo()
+        {            
+            string maMax = sp_DAO.MaSPLonNhat();
+            if (string.IsNullOrEmpty(maMax))
+            {
+                return "SP0001";
+            }
+            int ChuyenSo = int.Parse(maMax.Replace("SP", ""));
+            return "SP" + (ChuyenSo + 1).ToString("00000");
+        }
+
+        public bool XoaSanPham(string masp)
+        {
+            return sp_DAO.XoaSanPham(masp);
+        }
+
+        public bool ThemSanPham(clsSanPham_DTO sp_DTO)
+        {
+            return sp_DAO.ThemSanPham(sp_DTO);
+        }
+
+        public bool CapNhatSanPham(clsSanPham_DTO sp_DTO)
+        {
+            return sp_DAO.CapNhatSanPham(sp_DTO);
+        }
     }
+
+    
 }

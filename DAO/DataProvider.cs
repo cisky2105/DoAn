@@ -20,7 +20,7 @@ namespace DAO
                 conn.Open();
             }
             return conn;
-        }        
+        }
 
         public static SqlDataReader TruyVanDuLieu(string strTruyVan, SqlConnection conn)
         {
@@ -41,36 +41,13 @@ namespace DAO
             int ketqua = com.ExecuteNonQuery();
             return ketqua;
         }
+
         public static int ThucThiCauLenh(string strCauLenh, SqlParameter[] param, SqlConnection conn)
         {
             SqlCommand com = new SqlCommand(strCauLenh, conn);
             com.Parameters.AddRange(param);
             int ketqua = com.ExecuteNonQuery();
             return ketqua;
-        }
-
-        public static bool themDuLieu(string strTruyVan, SqlConnection conn) //trường hợp không có parammeter
-        {
-            SqlCommand com = new SqlCommand(strTruyVan, conn);
-            return (com.ExecuteNonQuery() > 0);
-        }
-        public static bool themDuLieu(string strTruyVan, SqlParameter[] param, SqlConnection conn) //trường hợp có parammeter
-        {
-            SqlCommand com = new SqlCommand(strTruyVan, conn);
-            com.Parameters.AddRange(param);
-            return (com.ExecuteNonQuery() > 0);
-        }
-
-        public static bool suaDuLieu(string strTruyVan, SqlConnection conn) //trường hợp không có parammeter
-        {
-            SqlCommand com = new SqlCommand(strTruyVan, conn);
-            return (com.ExecuteNonQuery() > 0);
-        }
-        public static bool suaDuLieu(string strTruyVan, SqlParameter[] param, SqlConnection conn) //trường hợp có parammeter
-        {
-            SqlCommand com = new SqlCommand(strTruyVan, conn);
-            com.Parameters.AddRange(param);
-            return (com.ExecuteNonQuery() > 0);
         }
 
     }

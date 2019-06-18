@@ -8,114 +8,131 @@ namespace DTO
 {
     public class clsSanPham_DTO
     {
-        private string _masp;       
-        private string _tensp;
-        private int _gia;
-        private int _giakm;
-        private string _mansx;
-        private int _soluong;
-        private bool _trangthai;
+        private string _MaSP;
+        private string _MaNSX;
+        private string _MaLoaiDT;
+        private string _TenSP;
+        private int _GiaBan;
+        private int? _GiaKM;
+        private int? _SLTonKho;
+        private string _HinhAnh;
+        private bool _TrangThai;
 
-        public string Masp
+        public string MaSP
         {
             get
             {
-                return _masp;
+                return _MaSP;
             }
 
             set
             {
-                _masp = value;
+                _MaSP = value;
             }
         }
 
-        public string Tensp
+        public string MaNSX
         {
             get
             {
-                return _tensp;
+                return _MaNSX;
             }
 
             set
             {
-                _tensp = value;
+                _MaNSX = value;
             }
         }
 
-        public int Gia
+        public string MaLoaiDT
         {
             get
             {
-                return _gia;
+                return _MaLoaiDT;
             }
 
             set
             {
-                _gia = value;
+                _MaLoaiDT = value;
             }
         }
 
-        public int Giakm
+        public string TenSP
         {
             get
             {
-                return _giakm;
+                return _TenSP;
             }
 
             set
             {
-                _giakm = value;
+                _TenSP = value;
             }
         }
 
-        public string Mansx
+        public int GiaBan
         {
             get
             {
-                return _mansx;
+                return _GiaBan;
             }
 
             set
             {
-                _mansx = value;
+                _GiaBan = value;
             }
         }
 
-        public int Soluong
+        public int? GiaKM
         {
             get
             {
-                return _soluong;
+                return _GiaKM;
             }
 
             set
             {
-                _soluong = value;
+                _GiaKM = value;
             }
         }
 
-        public bool Trangthai
+        public int? SLTonKho
         {
             get
             {
-                return _trangthai;
+                return _SLTonKho;
             }
 
             set
             {
-                _trangthai = value;
+                _SLTonKho = value;
             }
         }
 
-        //public clsSanPham_DTO(string masp, string tensp, int gia, int giakm, string mansx, int soluong, bool trangthai)
-        //{
-        //    this.Masp = masp;
-        //    this.Tensp = tensp;
-        //    this.Gia = gia;
-        //    this.Giakm = giakm;
-        //    this.Mansx = mansx;
-        //    this.Soluong = soluong;
-        //    this.Trangthai = trangthai;
-        //}
+        public string HinhAnh
+        {
+            get
+            {
+                return _HinhAnh;
+            }
+
+            set
+            {
+                _HinhAnh = value;
+            }
+        }
+
+        public bool TrangThai
+        {
+            get
+            {
+                return _TrangThai;
+            }
+
+            set
+            {
+                _TrangThai = value;
+            }
+        }
     }
 }

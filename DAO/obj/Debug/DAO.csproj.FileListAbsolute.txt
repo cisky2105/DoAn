@@ -8,3 +8,13 @@ C:\Users\HOANG KHANG\Desktop\DoAnTN\DoAn\GUI\DAO\bin\Debug\DTO.exe
 C:\Users\HOANG KHANG\Desktop\DoAnTN\DoAn\GUI\DAO\bin\Debug\DTO.pdb
 C:\Users\HOANG KHANG\Desktop\DoAnTN\DoAn\GUI\DAO\obj\Debug\DAO.exe
 C:\Users\HOANG KHANG\Desktop\DoAnTN\DoAn\GUI\DAO\obj\Debug\DAO.pdb
+C:\Users\HOANG KHANG\Desktop\DoAnTN\DoAn\DoAnDTDD\DAO\bin\Debug\DAO.exe.config
+C:\Users\HOANG KHANG\Desktop\DoAnTN\DoAn\DoAnDTDD\DAO\bin\Debug\DAO.exe
+C:\Users\HOANG KHANG\Desktop\DoAnTN\DoAn\DoAnDTDD\DAO\bin\Debug\DAO.pdb
+C:\Users\HOANG KHANG\Desktop\DoAnTN\DoAn\DoAnDTDD\DAO\bin\Debug\DTO.exe
+C:\Users\HOANG KHANG\Desktop\DoAnTN\DoAn\DoAnDTDD\DAO\bin\Debug\DTO.pdb
+C:\Users\HOANG KHANG\Desktop\DoAnTN\DoAn\DoAnDTDD\DAO\obj\Debug\DAO.csprojResolveAssemblyReference.cache
+C:\Users\HOANG KHANG\Desktop\DoAnTN\DoAn\DoAnDTDD\DAO\obj\Debug\DAO.Properties.Resources.resources
+C:\Users\HOANG KHANG\Desktop\DoAnTN\DoAn\DoAnDTDD\DAO\obj\Debug\DAO.csproj.GenerateResource.Cache
+C:\Users\HOANG KHANG\Desktop\DoAnTN\DoAn\DoAnDTDD\DAO\obj\Debug\DAO.exe
+C:\Users\HOANG KHANG\Desktop\DoAnTN\DoAn\DoAnDTDD\DAO\obj\Debug\DAO.pdb
