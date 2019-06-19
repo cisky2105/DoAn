@@ -47,7 +47,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="clsLoaiDT_BUS.cs" />
+    <Compile Include="clsNhanVien_BUS.cs" />
     <Compile Include="clsNhaSanXuat_BUS.cs" />
+    <Compile Include="clsQuyen_BUS.cs" />
     <Compile Include="clsSanPham_BUS.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>

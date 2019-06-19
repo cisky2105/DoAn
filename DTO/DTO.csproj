@@ -49,6 +49,7 @@
     <Compile Include="clsLoaiDT_DTO.cs" />
     <Compile Include="clsNhanVien_DTO.cs" />
     <Compile Include="clsNhaSanXuat_DTO.cs" />
+    <Compile Include="clsQuyen_DTO.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>

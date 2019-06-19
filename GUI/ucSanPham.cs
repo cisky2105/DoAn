@@ -42,6 +42,17 @@ namespace GUI
         {
             lsSanPham = sp_BUS.DanhSachSanPham();
             dgvQLSanPham.DataSource = lsSanPham;
+
+            lsNhaSanXuat = nsx_BUS.DanhSachNhaSanXuat();
+            lsLoaiDT = loaidt_BUS.DanhSachLoaiDT();
+
+            colNhaSanXuat.DataSource = lsNhaSanXuat;
+            colNhaSanXuat.DisplayMember = "TenNSX";
+            colNhaSanXuat.ValueMember = "MaNSX";
+
+            colLoaiSanPham.DataSource = lsLoaiDT;
+            colLoaiSanPham.DisplayMember = "TenLoaiDT";
+            colLoaiSanPham.ValueMember = "MaLoaiDT";
         }
 
 

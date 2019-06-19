@@ -30,8 +30,16 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ucNhanVien));
             this.picSanPham = new System.Windows.Forms.PictureBox();
-            this.dgvQLSanPham = new System.Windows.Forms.DataGridView();
+            this.dgvQLNhanVien = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txtSDTNV = new System.Windows.Forms.TextBox();
+            this.radNu = new System.Windows.Forms.RadioButton();
+            this.radNam = new System.Windows.Forms.RadioButton();
+            this.dtpNgaySinh = new System.Windows.Forms.DateTimePicker();
+            this.txtDiaChi = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.txtMatKhau = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
             this.cboQuyen = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
             this.txtTenNV = new System.Windows.Forms.TextBox();
@@ -50,23 +58,16 @@
             this.btnLuuNV = new System.Windows.Forms.Button();
             this.label22 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtMatKhau = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.txtDiaChi = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.dtpNgaySinh = new System.Windows.Forms.DateTimePicker();
-            this.radNam = new System.Windows.Forms.RadioButton();
-            this.radNu = new System.Windows.Forms.RadioButton();
-            this.txtSDTNV = new System.Windows.Forms.TextBox();
             this.colCMNDNV = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colTenNV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colMatKhau = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colNgaySinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colGioiTinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colSDTNV = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colQuyen = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colQuyen = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.colDiaChi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.picSanPham)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvQLSanPham)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvQLNhanVien)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -79,25 +80,29 @@
             this.picSanPham.TabIndex = 96;
             this.picSanPham.TabStop = false;
             // 
-            // dgvQLSanPham
+            // dgvQLNhanVien
             // 
-            this.dgvQLSanPham.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvQLSanPham.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvQLNhanVien.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvQLNhanVien.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colCMNDNV,
             this.colTenNV,
+            this.colMatKhau,
             this.colNgaySinh,
             this.colGioiTinh,
             this.colSDTNV,
             this.colQuyen,
             this.colDiaChi});
-            this.dgvQLSanPham.Location = new System.Drawing.Point(4, 4);
-            this.dgvQLSanPham.MultiSelect = false;
-            this.dgvQLSanPham.Name = "dgvQLSanPham";
-            this.dgvQLSanPham.RowHeadersVisible = false;
-            this.dgvQLSanPham.RowTemplate.Height = 24;
-            this.dgvQLSanPham.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvQLSanPham.Size = new System.Drawing.Size(1768, 429);
-            this.dgvQLSanPham.TabIndex = 0;
+            this.dgvQLNhanVien.Location = new System.Drawing.Point(4, 4);
+            this.dgvQLNhanVien.MultiSelect = false;
+            this.dgvQLNhanVien.Name = "dgvQLNhanVien";
+            this.dgvQLNhanVien.ReadOnly = true;
+            this.dgvQLNhanVien.RowHeadersVisible = false;
+            this.dgvQLNhanVien.RowTemplate.Height = 24;
+            this.dgvQLNhanVien.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvQLNhanVien.Size = new System.Drawing.Size(1768, 429);
+            this.dgvQLNhanVien.TabIndex = 0;
+            this.dgvQLNhanVien.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvQLNhanVien_CellFormatting);
+            this.dgvQLNhanVien.SelectionChanged += new System.EventHandler(this.dgvQLNhanVien_SelectionChanged);
             // 
             // panel1
             // 
@@ -122,6 +127,87 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1303, 178);
             this.panel1.TabIndex = 95;
+            // 
+            // txtSDTNV
+            // 
+            this.txtSDTNV.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSDTNV.Location = new System.Drawing.Point(942, 10);
+            this.txtSDTNV.Multiline = true;
+            this.txtSDTNV.Name = "txtSDTNV";
+            this.txtSDTNV.Size = new System.Drawing.Size(341, 34);
+            this.txtSDTNV.TabIndex = 98;
+            // 
+            // radNu
+            // 
+            this.radNu.AutoSize = true;
+            this.radNu.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radNu.Location = new System.Drawing.Point(405, 130);
+            this.radNu.Name = "radNu";
+            this.radNu.Size = new System.Drawing.Size(61, 30);
+            this.radNu.TabIndex = 97;
+            this.radNu.TabStop = true;
+            this.radNu.Text = "Nữ";
+            this.radNu.UseVisualStyleBackColor = true;
+            // 
+            // radNam
+            // 
+            this.radNam.AutoSize = true;
+            this.radNam.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radNam.Location = new System.Drawing.Point(251, 132);
+            this.radNam.Name = "radNam";
+            this.radNam.Size = new System.Drawing.Size(80, 30);
+            this.radNam.TabIndex = 96;
+            this.radNam.TabStop = true;
+            this.radNam.Text = "Nam";
+            this.radNam.UseVisualStyleBackColor = true;
+            // 
+            // dtpNgaySinh
+            // 
+            this.dtpNgaySinh.CustomFormat = "dd-MM-yyyy";
+            this.dtpNgaySinh.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpNgaySinh.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpNgaySinh.Location = new System.Drawing.Point(251, 88);
+            this.dtpNgaySinh.Name = "dtpNgaySinh";
+            this.dtpNgaySinh.Size = new System.Drawing.Size(341, 32);
+            this.dtpNgaySinh.TabIndex = 95;
+            // 
+            // txtDiaChi
+            // 
+            this.txtDiaChi.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDiaChi.Location = new System.Drawing.Point(942, 130);
+            this.txtDiaChi.Multiline = true;
+            this.txtDiaChi.Name = "txtDiaChi";
+            this.txtDiaChi.Size = new System.Drawing.Size(341, 34);
+            this.txtDiaChi.TabIndex = 94;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(809, 132);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(93, 26);
+            this.label9.TabIndex = 93;
+            this.label9.Text = "Địa chỉ:";
+            // 
+            // txtMatKhau
+            // 
+            this.txtMatKhau.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMatKhau.Location = new System.Drawing.Point(942, 88);
+            this.txtMatKhau.Multiline = true;
+            this.txtMatKhau.Name = "txtMatKhau";
+            this.txtMatKhau.Size = new System.Drawing.Size(341, 34);
+            this.txtMatKhau.TabIndex = 92;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(786, 91);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(116, 26);
+            this.label8.TabIndex = 91;
+            this.label8.Text = "Mật khẩu:";
             // 
             // cboQuyen
             // 
@@ -231,7 +317,7 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.dgvQLSanPham);
+            this.panel2.Controls.Add(this.dgvQLNhanVien);
             this.panel2.Location = new System.Drawing.Point(2, 438);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1775, 436);
@@ -249,6 +335,7 @@
             this.btnSuaNV.Text = "   Sửa";
             this.btnSuaNV.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnSuaNV.UseVisualStyleBackColor = false;
+            this.btnSuaNV.Click += new System.EventHandler(this.btnSuaNV_Click);
             // 
             // btnThemNV
             // 
@@ -262,6 +349,7 @@
             this.btnThemNV.Text = "Thêm";
             this.btnThemNV.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnThemNV.UseVisualStyleBackColor = false;
+            this.btnThemNV.Click += new System.EventHandler(this.btnThemNV_Click);
             // 
             // btnXoaNV
             // 
@@ -275,6 +363,7 @@
             this.btnXoaNV.Text = "Xóa";
             this.btnXoaNV.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnXoaNV.UseVisualStyleBackColor = false;
+            this.btnXoaNV.Click += new System.EventHandler(this.btnXoaNV_Click);
             // 
             // btnLuuNV
             // 
@@ -288,6 +377,7 @@
             this.btnLuuNV.Text = "Lưu";
             this.btnLuuNV.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnLuuNV.UseVisualStyleBackColor = false;
+            this.btnLuuNV.Click += new System.EventHandler(this.btnLuuNV_Click);
             // 
             // label22
             // 
@@ -309,93 +399,13 @@
             this.label1.TabIndex = 90;
             this.label1.Text = "THÔNG TIN NHÂN VIÊN";
             // 
-            // txtMatKhau
-            // 
-            this.txtMatKhau.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMatKhau.Location = new System.Drawing.Point(942, 88);
-            this.txtMatKhau.Multiline = true;
-            this.txtMatKhau.Name = "txtMatKhau";
-            this.txtMatKhau.Size = new System.Drawing.Size(341, 34);
-            this.txtMatKhau.TabIndex = 92;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(786, 91);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(116, 26);
-            this.label8.TabIndex = 91;
-            this.label8.Text = "Mật khẩu:";
-            // 
-            // txtDiaChi
-            // 
-            this.txtDiaChi.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDiaChi.Location = new System.Drawing.Point(942, 130);
-            this.txtDiaChi.Multiline = true;
-            this.txtDiaChi.Name = "txtDiaChi";
-            this.txtDiaChi.Size = new System.Drawing.Size(341, 34);
-            this.txtDiaChi.TabIndex = 94;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(809, 132);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(93, 26);
-            this.label9.TabIndex = 93;
-            this.label9.Text = "Địa chỉ:";
-            // 
-            // dtpNgaySinh
-            // 
-            this.dtpNgaySinh.CustomFormat = "dd-MM-yyyy";
-            this.dtpNgaySinh.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpNgaySinh.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpNgaySinh.Location = new System.Drawing.Point(251, 88);
-            this.dtpNgaySinh.Name = "dtpNgaySinh";
-            this.dtpNgaySinh.Size = new System.Drawing.Size(341, 32);
-            this.dtpNgaySinh.TabIndex = 95;
-            // 
-            // radNam
-            // 
-            this.radNam.AutoSize = true;
-            this.radNam.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radNam.Location = new System.Drawing.Point(251, 132);
-            this.radNam.Name = "radNam";
-            this.radNam.Size = new System.Drawing.Size(80, 30);
-            this.radNam.TabIndex = 96;
-            this.radNam.TabStop = true;
-            this.radNam.Text = "Nam";
-            this.radNam.UseVisualStyleBackColor = true;
-            // 
-            // radNu
-            // 
-            this.radNu.AutoSize = true;
-            this.radNu.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radNu.Location = new System.Drawing.Point(405, 130);
-            this.radNu.Name = "radNu";
-            this.radNu.Size = new System.Drawing.Size(61, 30);
-            this.radNu.TabIndex = 97;
-            this.radNu.TabStop = true;
-            this.radNu.Text = "Nữ";
-            this.radNu.UseVisualStyleBackColor = true;
-            // 
-            // txtSDTNV
-            // 
-            this.txtSDTNV.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSDTNV.Location = new System.Drawing.Point(942, 10);
-            this.txtSDTNV.Multiline = true;
-            this.txtSDTNV.Name = "txtSDTNV";
-            this.txtSDTNV.Size = new System.Drawing.Size(341, 34);
-            this.txtSDTNV.TabIndex = 98;
-            // 
             // colCMNDNV
             // 
             this.colCMNDNV.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.colCMNDNV.DataPropertyName = "CMNDNV";
             this.colCMNDNV.HeaderText = "CMND";
             this.colCMNDNV.Name = "colCMNDNV";
+            this.colCMNDNV.ReadOnly = true;
             // 
             // colTenNV
             // 
@@ -403,6 +413,14 @@
             this.colTenNV.DataPropertyName = "HoVaTen";
             this.colTenNV.HeaderText = "Họ và tên";
             this.colTenNV.Name = "colTenNV";
+            this.colTenNV.ReadOnly = true;
+            // 
+            // colMatKhau
+            // 
+            this.colMatKhau.DataPropertyName = "MatKhau";
+            this.colMatKhau.HeaderText = "Mật khẩu";
+            this.colMatKhau.Name = "colMatKhau";
+            this.colMatKhau.ReadOnly = true;
             // 
             // colNgaySinh
             // 
@@ -410,6 +428,7 @@
             this.colNgaySinh.DataPropertyName = "NgaySinh";
             this.colNgaySinh.HeaderText = "Ngày sinh";
             this.colNgaySinh.Name = "colNgaySinh";
+            this.colNgaySinh.ReadOnly = true;
             this.colNgaySinh.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             // 
             // colGioiTinh
@@ -418,6 +437,7 @@
             this.colGioiTinh.DataPropertyName = "GioiTinh";
             this.colGioiTinh.HeaderText = "Giới tính";
             this.colGioiTinh.Name = "colGioiTinh";
+            this.colGioiTinh.ReadOnly = true;
             this.colGioiTinh.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             // 
             // colSDTNV
@@ -426,6 +446,7 @@
             this.colSDTNV.DataPropertyName = "SDT";
             this.colSDTNV.HeaderText = "Số điện thoại";
             this.colSDTNV.Name = "colSDTNV";
+            this.colSDTNV.ReadOnly = true;
             // 
             // colQuyen
             // 
@@ -433,6 +454,9 @@
             this.colQuyen.DataPropertyName = "Quyen";
             this.colQuyen.HeaderText = "Quyền";
             this.colQuyen.Name = "colQuyen";
+            this.colQuyen.ReadOnly = true;
+            this.colQuyen.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.colQuyen.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
             // colDiaChi
             // 
@@ -440,6 +464,7 @@
             this.colDiaChi.DataPropertyName = "DiaChi";
             this.colDiaChi.HeaderText = "Địa chỉ";
             this.colDiaChi.Name = "colDiaChi";
+            this.colDiaChi.ReadOnly = true;
             // 
             // ucNhanVien
             // 
@@ -458,8 +483,9 @@
             this.Controls.Add(this.label1);
             this.Name = "ucNhanVien";
             this.Size = new System.Drawing.Size(1778, 883);
+            this.Load += new System.EventHandler(this.ucNhanVien_Load);
             ((System.ComponentModel.ISupportInitialize)(this.picSanPham)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvQLSanPham)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvQLNhanVien)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -471,7 +497,7 @@
         #endregion
 
         private System.Windows.Forms.PictureBox picSanPham;
-        private System.Windows.Forms.DataGridView dgvQLSanPham;
+        private System.Windows.Forms.DataGridView dgvQLNhanVien;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TextBox txtDiaChi;
         private System.Windows.Forms.Label label9;
@@ -501,10 +527,11 @@
         private System.Windows.Forms.DateTimePicker dtpNgaySinh;
         private System.Windows.Forms.DataGridViewTextBoxColumn colCMNDNV;
         private System.Windows.Forms.DataGridViewTextBoxColumn colTenNV;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colMatKhau;
         private System.Windows.Forms.DataGridViewTextBoxColumn colNgaySinh;
         private System.Windows.Forms.DataGridViewTextBoxColumn colGioiTinh;
         private System.Windows.Forms.DataGridViewTextBoxColumn colSDTNV;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colQuyen;
+        private System.Windows.Forms.DataGridViewComboBoxColumn colQuyen;
         private System.Windows.Forms.DataGridViewTextBoxColumn colDiaChi;
     }
 }
