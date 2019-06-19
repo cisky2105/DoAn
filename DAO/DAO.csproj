@@ -46,7 +46,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="clsKhachHang_DAO.cs" />
     <Compile Include="clsLoaiDT_DAO.cs" />
+    <Compile Include="clsNhaCungCap_DAO.cs" />
     <Compile Include="clsNhanVien_DAO.cs" />
     <Compile Include="clsNhaSanXuat_DAO.cs" />
     <Compile Include="clsQuyen_DAO.cs" />

@@ -140,6 +140,7 @@
             this.mnQuanLyNSX.Name = "mnQuanLyNSX";
             this.mnQuanLyNSX.Size = new System.Drawing.Size(367, 46);
             this.mnQuanLyNSX.Text = "Quản lý nhà sản xuất";
+            this.mnQuanLyNSX.Click += new System.EventHandler(this.mnQuanLyNSX_Click);
             // 
             // mnQuanLyNCC
             // 
@@ -147,6 +148,7 @@
             this.mnQuanLyNCC.Name = "mnQuanLyNCC";
             this.mnQuanLyNCC.Size = new System.Drawing.Size(367, 46);
             this.mnQuanLyNCC.Text = "Quản lý nhà cung cấp";
+            this.mnQuanLyNCC.Click += new System.EventHandler(this.mnQuanLyNCC_Click);
             // 
             // mnQuanLyKhachHang
             // 
@@ -154,6 +156,7 @@
             this.mnQuanLyKhachHang.Name = "mnQuanLyKhachHang";
             this.mnQuanLyKhachHang.Size = new System.Drawing.Size(367, 46);
             this.mnQuanLyKhachHang.Text = "Quản lý khách hàng";
+            this.mnQuanLyKhachHang.Click += new System.EventHandler(this.mnQuanLyKhachHang_Click);
             // 
             // mnQuanLyNhanVien
             // 

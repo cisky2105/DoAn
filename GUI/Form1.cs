@@ -36,5 +36,35 @@ namespace GUI
             banhang.Dock = DockStyle.Fill;
             banhang.BringToFront();
         }
+
+        private void mnQuanLyNCC_Click(object sender, EventArgs e)
+        {
+            panel1.Controls.Clear();
+            ucNhaCungCap banhang = new ucNhaCungCap();
+            panel1.Controls.Add(banhang);
+
+            banhang.Dock = DockStyle.Fill;
+            banhang.BringToFront();
+        }
+
+        private void mnQuanLyNSX_Click(object sender, EventArgs e)
+        {
+            panel1.Controls.Clear();
+            ucNhaSanXuat banhang = new ucNhaSanXuat();
+            panel1.Controls.Add(banhang);
+
+            banhang.Dock = DockStyle.Fill;
+            banhang.BringToFront();
+        }
+
+        private void mnQuanLyKhachHang_Click(object sender, EventArgs e)
+        {
+            panel1.Controls.Clear();
+            ucKhachHang banhang = new ucKhachHang();
+            panel1.Controls.Add(banhang);
+
+            banhang.Dock = DockStyle.Fill;
+            banhang.BringToFront();
+        }
     }
 }

@@ -46,6 +46,12 @@
             this.txtTimKiemSP = new System.Windows.Forms.TextBox();
             this.label22 = new System.Windows.Forms.Label();
             this.dgvQLSanPham = new System.Windows.Forms.DataGridView();
+            this.colMaSP = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colTenSP = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colLoaiSanPham = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.colNhaSanXuat = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.colGiaBan = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colGiaKhuyenMai = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnSuaSP = new System.Windows.Forms.Button();
             this.btnThemSP = new System.Windows.Forms.Button();
@@ -53,12 +59,6 @@
             this.btnLuuSP = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.picSanPham = new System.Windows.Forms.PictureBox();
-            this.colMaSP = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colTenSP = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colLoaiSanPham = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.colNhaSanXuat = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.colGiaBan = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colGiaKhuyenMai = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvQLSanPham)).BeginInit();
             this.panel2.SuspendLayout();
@@ -248,88 +248,6 @@
             this.dgvQLSanPham.TabIndex = 0;
             this.dgvQLSanPham.SelectionChanged += new System.EventHandler(this.dgvQLSanPham_SelectionChanged);
             // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.dgvQLSanPham);
-            this.panel2.Location = new System.Drawing.Point(2, 438);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1775, 436);
-            this.panel2.TabIndex = 80;
-            // 
-            // btnSuaSP
-            // 
-            this.btnSuaSP.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnSuaSP.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSuaSP.Image = ((System.Drawing.Image)(resources.GetObject("btnSuaSP.Image")));
-            this.btnSuaSP.Location = new System.Drawing.Point(1055, 334);
-            this.btnSuaSP.Name = "btnSuaSP";
-            this.btnSuaSP.Size = new System.Drawing.Size(237, 98);
-            this.btnSuaSP.TabIndex = 76;
-            this.btnSuaSP.Text = "   Sửa";
-            this.btnSuaSP.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnSuaSP.UseVisualStyleBackColor = false;
-            this.btnSuaSP.Click += new System.EventHandler(this.btnSuaSP_Click);
-            // 
-            // btnThemSP
-            // 
-            this.btnThemSP.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnThemSP.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThemSP.Image = ((System.Drawing.Image)(resources.GetObject("btnThemSP.Image")));
-            this.btnThemSP.Location = new System.Drawing.Point(274, 334);
-            this.btnThemSP.Name = "btnThemSP";
-            this.btnThemSP.Size = new System.Drawing.Size(237, 98);
-            this.btnThemSP.TabIndex = 75;
-            this.btnThemSP.Text = "Thêm";
-            this.btnThemSP.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnThemSP.UseVisualStyleBackColor = false;
-            this.btnThemSP.Click += new System.EventHandler(this.btnThemSP_Click);
-            // 
-            // btnXoaSP
-            // 
-            this.btnXoaSP.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnXoaSP.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnXoaSP.Image = ((System.Drawing.Image)(resources.GetObject("btnXoaSP.Image")));
-            this.btnXoaSP.Location = new System.Drawing.Point(673, 338);
-            this.btnXoaSP.Name = "btnXoaSP";
-            this.btnXoaSP.Size = new System.Drawing.Size(237, 98);
-            this.btnXoaSP.TabIndex = 77;
-            this.btnXoaSP.Text = "Xóa";
-            this.btnXoaSP.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnXoaSP.UseVisualStyleBackColor = false;
-            this.btnXoaSP.Click += new System.EventHandler(this.btnXoaSP_Click);
-            // 
-            // btnLuuSP
-            // 
-            this.btnLuuSP.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnLuuSP.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLuuSP.Image = ((System.Drawing.Image)(resources.GetObject("btnLuuSP.Image")));
-            this.btnLuuSP.Location = new System.Drawing.Point(1430, 338);
-            this.btnLuuSP.Name = "btnLuuSP";
-            this.btnLuuSP.Size = new System.Drawing.Size(237, 98);
-            this.btnLuuSP.TabIndex = 78;
-            this.btnLuuSP.Text = "Lưu";
-            this.btnLuuSP.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnLuuSP.UseVisualStyleBackColor = false;
-            this.btnLuuSP.Click += new System.EventHandler(this.btnLuuSP_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(586, 8);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(498, 48);
-            this.label1.TabIndex = 79;
-            this.label1.Text = "THÔNG TIN SẢN PHẨM";
-            // 
-            // picSanPham
-            // 
-            this.picSanPham.Location = new System.Drawing.Point(1375, 18);
-            this.picSanPham.Name = "picSanPham";
-            this.picSanPham.Size = new System.Drawing.Size(292, 297);
-            this.picSanPham.TabIndex = 85;
-            this.picSanPham.TabStop = false;
-            // 
             // colMaSP
             // 
             this.colMaSP.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
@@ -381,6 +299,89 @@
             this.colGiaKhuyenMai.HeaderText = "Giá khuyến mãi";
             this.colGiaKhuyenMai.Name = "colGiaKhuyenMai";
             this.colGiaKhuyenMai.ReadOnly = true;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.dgvQLSanPham);
+            this.panel2.Location = new System.Drawing.Point(2, 438);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1775, 436);
+            this.panel2.TabIndex = 80;
+            // 
+            // btnSuaSP
+            // 
+            this.btnSuaSP.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnSuaSP.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSuaSP.Image = ((System.Drawing.Image)(resources.GetObject("btnSuaSP.Image")));
+            this.btnSuaSP.Location = new System.Drawing.Point(1038, 334);
+            this.btnSuaSP.Name = "btnSuaSP";
+            this.btnSuaSP.Size = new System.Drawing.Size(237, 98);
+            this.btnSuaSP.TabIndex = 76;
+            this.btnSuaSP.Text = "   Sửa";
+            this.btnSuaSP.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnSuaSP.UseVisualStyleBackColor = false;
+            this.btnSuaSP.Click += new System.EventHandler(this.btnSuaSP_Click);
+            // 
+            // btnThemSP
+            // 
+            this.btnThemSP.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnThemSP.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThemSP.Image = ((System.Drawing.Image)(resources.GetObject("btnThemSP.Image")));
+            this.btnThemSP.Location = new System.Drawing.Point(257, 334);
+            this.btnThemSP.Name = "btnThemSP";
+            this.btnThemSP.Size = new System.Drawing.Size(237, 98);
+            this.btnThemSP.TabIndex = 75;
+            this.btnThemSP.Text = "Thêm";
+            this.btnThemSP.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnThemSP.UseVisualStyleBackColor = false;
+            this.btnThemSP.Click += new System.EventHandler(this.btnThemSP_Click);
+            // 
+            // btnXoaSP
+            // 
+            this.btnXoaSP.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnXoaSP.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXoaSP.Image = ((System.Drawing.Image)(resources.GetObject("btnXoaSP.Image")));
+            this.btnXoaSP.Location = new System.Drawing.Point(656, 338);
+            this.btnXoaSP.Name = "btnXoaSP";
+            this.btnXoaSP.Size = new System.Drawing.Size(237, 98);
+            this.btnXoaSP.TabIndex = 77;
+            this.btnXoaSP.Text = "Xóa";
+            this.btnXoaSP.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnXoaSP.UseVisualStyleBackColor = false;
+            this.btnXoaSP.Click += new System.EventHandler(this.btnXoaSP_Click);
+            // 
+            // btnLuuSP
+            // 
+            this.btnLuuSP.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnLuuSP.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLuuSP.Image = ((System.Drawing.Image)(resources.GetObject("btnLuuSP.Image")));
+            this.btnLuuSP.Location = new System.Drawing.Point(1413, 338);
+            this.btnLuuSP.Name = "btnLuuSP";
+            this.btnLuuSP.Size = new System.Drawing.Size(237, 98);
+            this.btnLuuSP.TabIndex = 78;
+            this.btnLuuSP.Text = "Lưu";
+            this.btnLuuSP.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnLuuSP.UseVisualStyleBackColor = false;
+            this.btnLuuSP.Click += new System.EventHandler(this.btnLuuSP_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(586, 8);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(498, 48);
+            this.label1.TabIndex = 79;
+            this.label1.Text = "THÔNG TIN SẢN PHẨM";
+            // 
+            // picSanPham
+            // 
+            this.picSanPham.Location = new System.Drawing.Point(1375, 18);
+            this.picSanPham.Name = "picSanPham";
+            this.picSanPham.Size = new System.Drawing.Size(300, 300);
+            this.picSanPham.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picSanPham.TabIndex = 85;
+            this.picSanPham.TabStop = false;
             // 
             // ucSanPham
             // 

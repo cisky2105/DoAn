@@ -8,46 +8,46 @@ namespace DTO
 {
     public class clsNhaSanXuat_DTO
     {
-        private string _mansx;
-        private string _tennsx;
-        private bool _trangthai;
+        private string _MaNSX;
+        private string _TenNSX;
+        private bool _TrangThai;
 
-        public string Mansx
+        public string MaNSX
         {
             get
             {
-                return _mansx;
+                return _MaNSX;
             }
 
             set
             {
-                _mansx = value;
+                _MaNSX = value;
             }
         }
 
-        public string Tennsx
+        public string TenNSX
         {
             get
             {
-                return _tennsx;
+                return _TenNSX;
             }
 
             set
             {
-                _tennsx = value;
+                _TenNSX = value;
             }
         }
 
-        public bool Trangthai
+        public bool TrangThai
         {
             get
             {
-                return _trangthai;
+                return _TrangThai;
             }
 
             set
             {
-                _trangthai = value;
+                _TrangThai = value;
             }
         }
     }

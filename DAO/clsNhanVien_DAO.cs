@@ -79,6 +79,6 @@ namespace DAO
             SqlConnection conn = DataProvider.TaoKetNoi();
             int kq = DataProvider.ThucThiCauLenh(strQuery, para, conn);
             return kq > 0;
-        }
+        }        
     }
 }

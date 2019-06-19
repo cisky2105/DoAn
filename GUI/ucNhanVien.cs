@@ -70,10 +70,10 @@ namespace GUI
                 txtTenNV.Text = nvChon_DTO.HoVaTen;
                 txtDiaChi.Text = nvChon_DTO.DiaChi;
                 dtpNgaySinh.Value = nvChon_DTO.NgaySinh;
-                if (nvChon_DTO.GioiTinh)
+                if (nvChon_DTO.GioiTinh == true)
                     radNam.Checked = true;
-                else
-                    radNu.Checked = false;
+                if(nvChon_DTO.GioiTinh == false)
+                    radNu.Checked = true;
                 txtSDTNV.Text = nvChon_DTO.SDT;
                 txtMatKhau.Text = nvChon_DTO.MatKhau;
                 cboQuyen.SelectedValue = nvChon_DTO.Quyen;

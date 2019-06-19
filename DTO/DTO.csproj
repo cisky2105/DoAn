@@ -46,7 +46,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="clsKhachHang_DTO.cs" />
     <Compile Include="clsLoaiDT_DTO.cs" />
+    <Compile Include="clsNhaCungCap_DTO.cs" />
     <Compile Include="clsNhanVien_DTO.cs" />
     <Compile Include="clsNhaSanXuat_DTO.cs" />
     <Compile Include="clsQuyen_DTO.cs" />

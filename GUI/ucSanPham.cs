@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using BUS;
 using DTO;
+using System.IO;
 
 namespace GUI
 {
@@ -25,6 +26,7 @@ namespace GUI
         clsLoaiDT_BUS loaidt_BUS = new clsLoaiDT_BUS();
         clsSanPham_DTO spChon_DTO = null;
         int tam = 0; // 0 la them, 1 la sua
+        string strPath = @"images\";
 
         List<clsSanPham_DTO> lsSanPham = new List<clsSanPham_DTO>();
         List<clsNhaSanXuat_DTO> lsNhaSanXuat = new List<clsNhaSanXuat_DTO>();
@@ -72,7 +74,7 @@ namespace GUI
             cboLoaiDT.ValueMember = "MaLoaiDT";
         }
 
-        public void BindingChiTiet()
+        private void BindingChiTiet()
         {
             if(spChon_DTO != null)
             {
@@ -82,6 +84,16 @@ namespace GUI
                 txtKhuyenMai.Text = spChon_DTO.GiaKM.ToString();
                 cboNhaSanXuat.SelectedValue = spChon_DTO.MaNSX;
                 cboLoaiDT.SelectedValue = spChon_DTO.MaLoaiDT;
+                if (File.Exists(strPath + spChon_DTO.HinhAnh))
+                {
+                    byte[] byteHA = File.ReadAllBytes(strPath + spChon_DTO.HinhAnh);
+                    MemoryStream ms = new MemoryStream(byteHA);
+                    picSanPham.Image = Image.FromStream(ms);
+                }
+                else
+                {
+                    picSanPham.Image = null;
+                }
             }
             else
             {

@@ -29,47 +29,42 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ucNhaCungCap));
-            this.colDiaChiNCC = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.txtDiaChiKH = new System.Windows.Forms.TextBox();
+            this.txtDiaChiNCC = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtSDTNCC = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.btnLuuKH = new System.Windows.Forms.Button();
-            this.btnXoaKH = new System.Windows.Forms.Button();
-            this.btnSuaKH = new System.Windows.Forms.Button();
-            this.btnThemKH = new System.Windows.Forms.Button();
-            this.txtEmailKH = new System.Windows.Forms.TextBox();
+            this.btnLuuNCC = new System.Windows.Forms.Button();
+            this.btnXoaNCC = new System.Windows.Forms.Button();
+            this.btnSuaNCC = new System.Windows.Forms.Button();
+            this.btnThemNCC = new System.Windows.Forms.Button();
+            this.txtEmailNCC = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.colSDTNCC = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colTenNCC = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvNhaCungCap = new System.Windows.Forms.DataGridView();
             this.colMaNCC = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.colTenNCC = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colSDTNCC = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colEmailNCC = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colDiaChiNCC = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.txtTenKH = new System.Windows.Forms.TextBox();
+            this.txtTenNCC = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtSDTKH = new System.Windows.Forms.TextBox();
+            this.txtMaNCC = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvNhaCungCap)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // colDiaChiNCC
+            // txtDiaChiNCC
             // 
-            this.colDiaChiNCC.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.colDiaChiNCC.HeaderText = "Địa chỉ";
-            this.colDiaChiNCC.Name = "colDiaChiNCC";
-            // 
-            // txtDiaChiKH
-            // 
-            this.txtDiaChiKH.Location = new System.Drawing.Point(1045, 22);
-            this.txtDiaChiKH.Multiline = true;
-            this.txtDiaChiKH.Name = "txtDiaChiKH";
-            this.txtDiaChiKH.Size = new System.Drawing.Size(237, 34);
-            this.txtDiaChiKH.TabIndex = 40;
+            this.txtDiaChiNCC.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDiaChiNCC.Location = new System.Drawing.Point(1045, 22);
+            this.txtDiaChiNCC.Multiline = true;
+            this.txtDiaChiNCC.Name = "txtDiaChiNCC";
+            this.txtDiaChiNCC.Size = new System.Drawing.Size(237, 34);
+            this.txtDiaChiNCC.TabIndex = 40;
             // 
             // label4
             // 
@@ -81,13 +76,14 @@
             this.label4.TabIndex = 39;
             this.label4.Text = "Địa chỉ:";
             // 
-            // textBox1
+            // txtSDTNCC
             // 
-            this.textBox1.Location = new System.Drawing.Point(509, 122);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(237, 34);
-            this.textBox1.TabIndex = 38;
+            this.txtSDTNCC.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSDTNCC.Location = new System.Drawing.Point(509, 122);
+            this.txtSDTNCC.Multiline = true;
+            this.txtSDTNCC.Name = "txtSDTNCC";
+            this.txtSDTNCC.Size = new System.Drawing.Size(237, 34);
+            this.txtSDTNCC.TabIndex = 38;
             // 
             // label5
             // 
@@ -99,65 +95,70 @@
             this.label5.TabIndex = 37;
             this.label5.Text = "Số điện thoại:";
             // 
-            // btnLuuKH
+            // btnLuuNCC
             // 
-            this.btnLuuKH.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnLuuKH.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLuuKH.Image = ((System.Drawing.Image)(resources.GetObject("btnLuuKH.Image")));
-            this.btnLuuKH.Location = new System.Drawing.Point(1150, 214);
-            this.btnLuuKH.Name = "btnLuuKH";
-            this.btnLuuKH.Size = new System.Drawing.Size(237, 98);
-            this.btnLuuKH.TabIndex = 36;
-            this.btnLuuKH.Text = "Lưu";
-            this.btnLuuKH.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnLuuKH.UseVisualStyleBackColor = false;
+            this.btnLuuNCC.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnLuuNCC.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLuuNCC.Image = ((System.Drawing.Image)(resources.GetObject("btnLuuNCC.Image")));
+            this.btnLuuNCC.Location = new System.Drawing.Point(1150, 214);
+            this.btnLuuNCC.Name = "btnLuuNCC";
+            this.btnLuuNCC.Size = new System.Drawing.Size(237, 98);
+            this.btnLuuNCC.TabIndex = 36;
+            this.btnLuuNCC.Text = "Lưu";
+            this.btnLuuNCC.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnLuuNCC.UseVisualStyleBackColor = false;
+            this.btnLuuNCC.Click += new System.EventHandler(this.btnLuuNCC_Click);
             // 
-            // btnXoaKH
+            // btnXoaNCC
             // 
-            this.btnXoaKH.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnXoaKH.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnXoaKH.Image = ((System.Drawing.Image)(resources.GetObject("btnXoaKH.Image")));
-            this.btnXoaKH.Location = new System.Drawing.Point(857, 214);
-            this.btnXoaKH.Name = "btnXoaKH";
-            this.btnXoaKH.Size = new System.Drawing.Size(237, 98);
-            this.btnXoaKH.TabIndex = 35;
-            this.btnXoaKH.Text = "Xóa";
-            this.btnXoaKH.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnXoaKH.UseVisualStyleBackColor = false;
+            this.btnXoaNCC.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnXoaNCC.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXoaNCC.Image = ((System.Drawing.Image)(resources.GetObject("btnXoaNCC.Image")));
+            this.btnXoaNCC.Location = new System.Drawing.Point(857, 214);
+            this.btnXoaNCC.Name = "btnXoaNCC";
+            this.btnXoaNCC.Size = new System.Drawing.Size(237, 98);
+            this.btnXoaNCC.TabIndex = 35;
+            this.btnXoaNCC.Text = "Xóa";
+            this.btnXoaNCC.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnXoaNCC.UseVisualStyleBackColor = false;
+            this.btnXoaNCC.Click += new System.EventHandler(this.btnXoaNCC_Click);
             // 
-            // btnSuaKH
+            // btnSuaNCC
             // 
-            this.btnSuaKH.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnSuaKH.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSuaKH.Image = ((System.Drawing.Image)(resources.GetObject("btnSuaKH.Image")));
-            this.btnSuaKH.Location = new System.Drawing.Point(530, 214);
-            this.btnSuaKH.Name = "btnSuaKH";
-            this.btnSuaKH.Size = new System.Drawing.Size(237, 98);
-            this.btnSuaKH.TabIndex = 34;
-            this.btnSuaKH.Text = "   Sửa";
-            this.btnSuaKH.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnSuaKH.UseVisualStyleBackColor = false;
+            this.btnSuaNCC.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnSuaNCC.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSuaNCC.Image = ((System.Drawing.Image)(resources.GetObject("btnSuaNCC.Image")));
+            this.btnSuaNCC.Location = new System.Drawing.Point(530, 214);
+            this.btnSuaNCC.Name = "btnSuaNCC";
+            this.btnSuaNCC.Size = new System.Drawing.Size(237, 98);
+            this.btnSuaNCC.TabIndex = 34;
+            this.btnSuaNCC.Text = "   Sửa";
+            this.btnSuaNCC.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnSuaNCC.UseVisualStyleBackColor = false;
+            this.btnSuaNCC.Click += new System.EventHandler(this.btnSuaNCC_Click);
             // 
-            // btnThemKH
+            // btnThemNCC
             // 
-            this.btnThemKH.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnThemKH.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThemKH.Image = ((System.Drawing.Image)(resources.GetObject("btnThemKH.Image")));
-            this.btnThemKH.Location = new System.Drawing.Point(241, 214);
-            this.btnThemKH.Name = "btnThemKH";
-            this.btnThemKH.Size = new System.Drawing.Size(237, 98);
-            this.btnThemKH.TabIndex = 33;
-            this.btnThemKH.Text = "Thêm";
-            this.btnThemKH.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnThemKH.UseVisualStyleBackColor = false;
+            this.btnThemNCC.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnThemNCC.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThemNCC.Image = ((System.Drawing.Image)(resources.GetObject("btnThemNCC.Image")));
+            this.btnThemNCC.Location = new System.Drawing.Point(241, 214);
+            this.btnThemNCC.Name = "btnThemNCC";
+            this.btnThemNCC.Size = new System.Drawing.Size(237, 98);
+            this.btnThemNCC.TabIndex = 33;
+            this.btnThemNCC.Text = "Thêm";
+            this.btnThemNCC.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnThemNCC.UseVisualStyleBackColor = false;
+            this.btnThemNCC.Click += new System.EventHandler(this.btnThemNCC_Click);
             // 
-            // txtEmailKH
+            // txtEmailNCC
             // 
-            this.txtEmailKH.Location = new System.Drawing.Point(1045, 122);
-            this.txtEmailKH.Multiline = true;
-            this.txtEmailKH.Name = "txtEmailKH";
-            this.txtEmailKH.Size = new System.Drawing.Size(237, 34);
-            this.txtEmailKH.TabIndex = 22;
+            this.txtEmailNCC.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmailNCC.Location = new System.Drawing.Point(1045, 122);
+            this.txtEmailNCC.Multiline = true;
+            this.txtEmailNCC.Name = "txtEmailNCC";
+            this.txtEmailNCC.Size = new System.Drawing.Size(237, 34);
+            this.txtEmailNCC.TabIndex = 22;
             // 
             // label6
             // 
@@ -169,60 +170,81 @@
             this.label6.TabIndex = 21;
             this.label6.Text = "Email:";
             // 
-            // colSDTNCC
+            // dgvNhaCungCap
             // 
-            this.colSDTNCC.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.colSDTNCC.HeaderText = "Số điện thoại";
-            this.colSDTNCC.Name = "colSDTNCC";
-            // 
-            // colTenNCC
-            // 
-            this.colTenNCC.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.colTenNCC.HeaderText = "Tên nhà cung cấp";
-            this.colTenNCC.Name = "colTenNCC";
-            // 
-            // colMaNCC
-            // 
-            this.colMaNCC.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.colMaNCC.HeaderText = "Mã nhà cung cấp";
-            this.colMaNCC.Name = "colMaNCC";
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvNhaCungCap.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvNhaCungCap.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colMaNCC,
             this.colTenNCC,
             this.colSDTNCC,
             this.colEmailNCC,
             this.colDiaChiNCC});
-            this.dataGridView1.Location = new System.Drawing.Point(6, 3);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1769, 447);
-            this.dataGridView1.TabIndex = 29;
+            this.dgvNhaCungCap.Location = new System.Drawing.Point(6, 3);
+            this.dgvNhaCungCap.MultiSelect = false;
+            this.dgvNhaCungCap.Name = "dgvNhaCungCap";
+            this.dgvNhaCungCap.ReadOnly = true;
+            this.dgvNhaCungCap.RowTemplate.Height = 24;
+            this.dgvNhaCungCap.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvNhaCungCap.Size = new System.Drawing.Size(1769, 447);
+            this.dgvNhaCungCap.TabIndex = 29;
+            this.dgvNhaCungCap.SelectionChanged += new System.EventHandler(this.dataGridView1_SelectionChanged);
+            // 
+            // colMaNCC
+            // 
+            this.colMaNCC.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.colMaNCC.DataPropertyName = "MaNCC";
+            this.colMaNCC.HeaderText = "Mã nhà cung cấp";
+            this.colMaNCC.Name = "colMaNCC";
+            this.colMaNCC.ReadOnly = true;
+            // 
+            // colTenNCC
+            // 
+            this.colTenNCC.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.colTenNCC.DataPropertyName = "TenNCC";
+            this.colTenNCC.HeaderText = "Tên nhà cung cấp";
+            this.colTenNCC.Name = "colTenNCC";
+            this.colTenNCC.ReadOnly = true;
+            // 
+            // colSDTNCC
+            // 
+            this.colSDTNCC.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.colSDTNCC.DataPropertyName = "SDT";
+            this.colSDTNCC.HeaderText = "Số điện thoại";
+            this.colSDTNCC.Name = "colSDTNCC";
+            this.colSDTNCC.ReadOnly = true;
             // 
             // colEmailNCC
             // 
             this.colEmailNCC.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.colEmailNCC.DataPropertyName = "Email";
             this.colEmailNCC.HeaderText = "Email";
             this.colEmailNCC.Name = "colEmailNCC";
+            this.colEmailNCC.ReadOnly = true;
+            // 
+            // colDiaChiNCC
+            // 
+            this.colDiaChiNCC.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.colDiaChiNCC.DataPropertyName = "DiaChi";
+            this.colDiaChiNCC.HeaderText = "Địa chỉ";
+            this.colDiaChiNCC.Name = "colDiaChiNCC";
+            this.colDiaChiNCC.ReadOnly = true;
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.dataGridView1);
+            this.panel2.Controls.Add(this.dgvNhaCungCap);
             this.panel2.Location = new System.Drawing.Point(3, 416);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1772, 453);
             this.panel2.TabIndex = 41;
             // 
-            // txtTenKH
+            // txtTenNCC
             // 
-            this.txtTenKH.Location = new System.Drawing.Point(509, 67);
-            this.txtTenKH.Multiline = true;
-            this.txtTenKH.Name = "txtTenKH";
-            this.txtTenKH.Size = new System.Drawing.Size(237, 34);
-            this.txtTenKH.TabIndex = 16;
+            this.txtTenNCC.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTenNCC.Location = new System.Drawing.Point(509, 67);
+            this.txtTenNCC.Multiline = true;
+            this.txtTenNCC.Name = "txtTenNCC";
+            this.txtTenNCC.Size = new System.Drawing.Size(237, 34);
+            this.txtTenNCC.TabIndex = 16;
             // 
             // label3
             // 
@@ -234,13 +256,14 @@
             this.label3.TabIndex = 15;
             this.label3.Text = "Tên nhà cung cấp:";
             // 
-            // txtSDTKH
+            // txtMaNCC
             // 
-            this.txtSDTKH.Location = new System.Drawing.Point(509, 17);
-            this.txtSDTKH.Multiline = true;
-            this.txtSDTKH.Name = "txtSDTKH";
-            this.txtSDTKH.Size = new System.Drawing.Size(237, 34);
-            this.txtSDTKH.TabIndex = 14;
+            this.txtMaNCC.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMaNCC.Location = new System.Drawing.Point(509, 17);
+            this.txtMaNCC.Multiline = true;
+            this.txtMaNCC.Name = "txtMaNCC";
+            this.txtMaNCC.Size = new System.Drawing.Size(237, 34);
+            this.txtMaNCC.TabIndex = 14;
             // 
             // label2
             // 
@@ -264,19 +287,19 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.txtDiaChiKH);
+            this.panel1.Controls.Add(this.txtDiaChiNCC);
             this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.txtSDTNCC);
             this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.btnLuuKH);
-            this.panel1.Controls.Add(this.btnXoaKH);
-            this.panel1.Controls.Add(this.btnSuaKH);
-            this.panel1.Controls.Add(this.btnThemKH);
-            this.panel1.Controls.Add(this.txtEmailKH);
+            this.panel1.Controls.Add(this.btnLuuNCC);
+            this.panel1.Controls.Add(this.btnXoaNCC);
+            this.panel1.Controls.Add(this.btnSuaNCC);
+            this.panel1.Controls.Add(this.btnThemNCC);
+            this.panel1.Controls.Add(this.txtEmailNCC);
             this.panel1.Controls.Add(this.label6);
-            this.panel1.Controls.Add(this.txtTenKH);
+            this.panel1.Controls.Add(this.txtTenNCC);
             this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.txtSDTKH);
+            this.panel1.Controls.Add(this.txtMaNCC);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Location = new System.Drawing.Point(3, 83);
             this.panel1.Name = "panel1";
@@ -292,7 +315,8 @@
             this.Controls.Add(this.panel1);
             this.Name = "ucNhaCungCap";
             this.Size = new System.Drawing.Size(1778, 883);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.ucNhaCungCap_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvNhaCungCap)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -302,29 +326,28 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.DataGridViewTextBoxColumn colDiaChiNCC;
-        private System.Windows.Forms.TextBox txtDiaChiKH;
+        private System.Windows.Forms.TextBox txtDiaChiNCC;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtSDTNCC;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button btnLuuKH;
-        private System.Windows.Forms.Button btnXoaKH;
-        private System.Windows.Forms.Button btnSuaKH;
-        private System.Windows.Forms.Button btnThemKH;
-        private System.Windows.Forms.TextBox txtEmailKH;
+        private System.Windows.Forms.Button btnLuuNCC;
+        private System.Windows.Forms.Button btnXoaNCC;
+        private System.Windows.Forms.Button btnSuaNCC;
+        private System.Windows.Forms.Button btnThemNCC;
+        private System.Windows.Forms.TextBox txtEmailNCC;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colSDTNCC;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colTenNCC;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colMaNCC;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colEmailNCC;
+        private System.Windows.Forms.DataGridView dgvNhaCungCap;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.TextBox txtTenKH;
+        private System.Windows.Forms.TextBox txtTenNCC;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtSDTKH;
+        private System.Windows.Forms.TextBox txtMaNCC;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colMaNCC;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colTenNCC;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colSDTNCC;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colEmailNCC;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colDiaChiNCC;
     }
 }
