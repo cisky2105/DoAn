@@ -38,7 +38,30 @@ namespace DAO
             conn.Close();
             return lsResult;
         }
-
+        public List<clsSanPham_DTO> DanhSachSanPhamTheoTen(string tensp)
+        {
+            List<clsSanPham_DTO> lsResult = new List<clsSanPham_DTO>();
+            string strQuery = "Select * From SanPham Where TrangThai = 1 and TenSP like '%"+tensp+"%'";
+            SqlConnection conn = DataProvider.TaoKetNoi();
+            SqlDataReader sdr = DataProvider.TruyVanDuLieu(strQuery, conn);
+            while (sdr.Read())
+            {
+                clsSanPham_DTO _spdto = new clsSanPham_DTO();
+                _spdto.MaSP = sdr["MaSP"].ToString();
+                _spdto.TenSP = sdr["TenSP"].ToString();
+                _spdto.GiaBan = int.Parse(sdr["GiaBan"].ToString());
+                _spdto.GiaKM = int.Parse(sdr["GiaKM"].ToString());
+                _spdto.MaNSX = sdr["MaNSX"].ToString();
+                _spdto.SLTonKho = int.Parse(sdr["SLTonKho"].ToString());
+                _spdto.TrangThai = bool.Parse(sdr["TrangThai"].ToString());
+                _spdto.MaLoaiDT = sdr["MaLoaiDT"].ToString();
+                _spdto.HinhAnh = sdr["HinhAnh"].ToString();
+                lsResult.Add(_spdto);
+            }
+            sdr.Close();
+            conn.Close();
+            return lsResult;
+        }
         public string MaSPLonNhat()
         {
             string strResult = null;

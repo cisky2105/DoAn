@@ -40,3 +40,4 @@ C:\Users\HOANG KHANG\Desktop\DoAnTN\DoAn\DoAnDTDD\GUI\obj\Debug\GUI.ucNhanVien.r
 C:\Users\HOANG KHANG\Desktop\DoAnTN\DoAn\DoAnDTDD\GUI\obj\Debug\GUI.ucNhaSanXuat.resources
 C:\Users\HOANG KHANG\Desktop\DoAnTN\DoAn\DoAnDTDD\GUI\obj\Debug\GUI.ucSanPham.resources
 C:\Users\HOANG KHANG\Desktop\DoAnTN\DoAn\DoAnDTDD\GUI\obj\Debug\GUI.csproj.GenerateResource.Cache
+C:\Users\HOANG KHANG\Desktop\DoAnTN\DoAn\DoAnDTDD\GUI\obj\Debug\GUI.ucNhapHang.resources

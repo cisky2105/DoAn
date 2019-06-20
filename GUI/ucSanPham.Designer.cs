@@ -42,7 +42,6 @@
             this.cboLoaiDT = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
             this.txtMaSP = new System.Windows.Forms.TextBox();
-            this.btnTimKhachHang = new System.Windows.Forms.Button();
             this.txtTimKiemSP = new System.Windows.Forms.TextBox();
             this.label22 = new System.Windows.Forms.Label();
             this.dgvQLSanPham = new System.Windows.Forms.DataGridView();
@@ -198,16 +197,6 @@
             this.txtMaSP.Size = new System.Drawing.Size(341, 34);
             this.txtMaSP.TabIndex = 76;
             // 
-            // btnTimKhachHang
-            // 
-            this.btnTimKhachHang.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnTimKhachHang.BackgroundImage")));
-            this.btnTimKhachHang.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnTimKhachHang.Location = new System.Drawing.Point(629, 97);
-            this.btnTimKhachHang.Name = "btnTimKhachHang";
-            this.btnTimKhachHang.Size = new System.Drawing.Size(86, 34);
-            this.btnTimKhachHang.TabIndex = 83;
-            this.btnTimKhachHang.UseVisualStyleBackColor = true;
-            // 
             // txtTimKiemSP
             // 
             this.txtTimKiemSP.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -216,6 +205,7 @@
             this.txtTimKiemSP.Name = "txtTimKiemSP";
             this.txtTimKiemSP.Size = new System.Drawing.Size(341, 34);
             this.txtTimKiemSP.TabIndex = 82;
+            this.txtTimKiemSP.TextChanged += new System.EventHandler(this.txtTimKiemSP_TextChanged);
             // 
             // label22
             // 
@@ -229,6 +219,8 @@
             // 
             // dgvQLSanPham
             // 
+            this.dgvQLSanPham.AllowUserToAddRows = false;
+            this.dgvQLSanPham.AllowUserToDeleteRows = false;
             this.dgvQLSanPham.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvQLSanPham.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colMaSP,
@@ -382,6 +374,7 @@
             this.picSanPham.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picSanPham.TabIndex = 85;
             this.picSanPham.TabStop = false;
+            this.picSanPham.Click += new System.EventHandler(this.picSanPham_Click);
             // 
             // ucSanPham
             // 
@@ -389,7 +382,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.picSanPham);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.btnTimKhachHang);
             this.Controls.Add(this.txtTimKiemSP);
             this.Controls.Add(this.label22);
             this.Controls.Add(this.panel2);
@@ -424,7 +416,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TextBox txtMaSP;
-        private System.Windows.Forms.Button btnTimKhachHang;
         private System.Windows.Forms.TextBox txtTimKiemSP;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.DataGridView dgvQLSanPham;

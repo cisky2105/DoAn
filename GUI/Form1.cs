@@ -66,5 +66,15 @@ namespace GUI
             banhang.Dock = DockStyle.Fill;
             banhang.BringToFront();
         }
+
+        private void mnNhapHang_Click(object sender, EventArgs e)
+        {
+            panel1.Controls.Clear();
+            ucNhapHang banhang = new ucNhapHang();
+            panel1.Controls.Add(banhang);
+
+            banhang.Dock = DockStyle.Fill;
+            banhang.BringToFront();
+        }
     }
 }

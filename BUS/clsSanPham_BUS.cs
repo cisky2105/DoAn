@@ -29,6 +29,10 @@ namespace BUS
             return "SP" + (ChuyenSo + 1).ToString("00000");
         }
 
+        public List<clsSanPham_DTO> DanhSachSanPhamTheoTen(string tensp)
+        {
+            return sp_DAO.DanhSachSanPhamTheoTen(tensp);
+        }
         public bool XoaSanPham(string masp)
         {
             return sp_DAO.XoaSanPham(masp);

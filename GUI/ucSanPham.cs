@@ -18,7 +18,8 @@ namespace GUI
         public ucSanPham()
         {
             InitializeComponent();
-            dgvQLSanPham.AutoGenerateColumns = false;
+            dgvQLSanPham.AutoGenerateColumns = false;           
+            this.dgvQLSanPham.DefaultCellStyle.Font = new Font("Arial", 12);
         }
 
         clsSanPham_BUS sp_BUS = new clsSanPham_BUS();
@@ -33,6 +34,7 @@ namespace GUI
         List<clsLoaiDT_DTO> lsLoaiDT = new List<clsLoaiDT_DTO>();
         private void ucSanPham_Load(object sender, EventArgs e)
         {
+            
             txtMaSP.Enabled = false;
             DisGiaoDien();
             LoadDSSP();
@@ -103,6 +105,7 @@ namespace GUI
                 txtKhuyenMai.Clear();
                 cboLoaiDT.SelectedValue = -1;
                 cboNhaSanXuat.SelectedValue = -1;
+                picSanPham.Image = null;
             }
         }
     
@@ -110,6 +113,7 @@ namespace GUI
 
         private void dgvQLSanPham_SelectionChanged(object sender, EventArgs e)
         {
+            DisGiaoDien();
             if (dgvQLSanPham.SelectedRows.Count > 0)
                 spChon_DTO = (clsSanPham_DTO)dgvQLSanPham.SelectedRows[0].DataBoundItem;
             else
@@ -133,12 +137,13 @@ namespace GUI
                 spChon_DTO.GiaKM = int.Parse(txtKhuyenMai.Text.ToString());
             spChon_DTO.MaLoaiDT = cboLoaiDT.SelectedValue.ToString();
             spChon_DTO.MaNSX = cboNhaSanXuat.SelectedValue.ToString();
-            spChon_DTO.HinhAnh = "abc";
+            spChon_DTO.HinhAnh = spChon_DTO.MaSP + ".jpg";
         }
 
         private void btnThemSP_Click(object sender, EventArgs e)
         {
             ClearGiaoDien();
+            picSanPham.Image = null;
             EnGiaoDien();
             tam = 0;
             spChon_DTO = null;
@@ -158,6 +163,7 @@ namespace GUI
             txtKhuyenMai.Enabled = false;
             cboLoaiDT.Enabled = false;
             cboNhaSanXuat.Enabled = false;
+            picSanPham.Enabled = false;
         }
 
         private void EnGiaoDien()
@@ -167,6 +173,7 @@ namespace GUI
             txtKhuyenMai.Enabled = true;
             cboLoaiDT.Enabled = true;
             cboNhaSanXuat.Enabled = true;
+            picSanPham.Enabled = true;
         }
 
         private void btnSuaSP_Click(object sender, EventArgs e)
@@ -183,8 +190,9 @@ namespace GUI
             {
                 if (dir == DialogResult.Yes)
                 {
-                    if (sp_BUS.XoaSanPham(spChon_DTO.MaSP))
-                        MessageBox.Show("Bạn đã xóa sản phẩm!", "Thông báo");
+                    if (sp_BUS.XoaSanPham(spChon_DTO.MaSP))                                           
+                        MessageBox.Show("Bạn đã xóa sản phẩm!", "Thông báo");                    
+                        
                     else
                         MessageBox.Show("Xóa sản phẩm không thành công!");
                 }
@@ -205,6 +213,10 @@ namespace GUI
                     GetDataChiTiet();
                     if (sp_BUS.ThemSanPham(spChon_DTO))
                     {
+                        if (picSanPham.Image != null)
+                        {
+                            picSanPham.Image.Save(spChon_DTO.HinhAnh);
+                        }
                         MessageBox.Show("Thêm sản phẩm thành công!");
                         LoadDSSP();
                     }
@@ -219,6 +231,10 @@ namespace GUI
                     GetDataChiTiet();
                     if (sp_BUS.CapNhatSanPham(spChon_DTO))
                     {
+                        if (picSanPham.Image != null)
+                        {
+                            picSanPham.Image.Save(spChon_DTO.HinhAnh);
+                        }
                         MessageBox.Show("Sửa sản phẩm thành công!");
                         LoadDSSP();
                     }
@@ -235,6 +251,29 @@ namespace GUI
                 MessageBox.Show(ex.Message);
             }
             
+        }
+
+        private void picSanPham_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog ofd = new OpenFileDialog();
+            ofd.Filter = "Hình ảnh (jpg) | *.jpg";
+            DialogResult dr = ofd.ShowDialog();
+            if (dr == DialogResult.Cancel)
+            {
+                picSanPham.Image = null;
+            }
+            else
+            {
+                byte[] byteHA = File.ReadAllBytes(ofd.FileName);
+                MemoryStream ms = new MemoryStream(byteHA);
+                picSanPham.Image = Image.FromStream(ms);
+            }
+        }
+
+        private void txtTimKiemSP_TextChanged(object sender, EventArgs e)
+        {
+            lsSanPham = sp_BUS.DanhSachSanPhamTheoTen(txtTimKiemSP.Text);
+            dgvQLSanPham.DataSource = lsSanPham;
         }
     }
 }
