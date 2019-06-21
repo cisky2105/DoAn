@@ -32,6 +32,28 @@ namespace DAO
             return lsResult;
         }
 
+        public List<clsKhachHang_DTO> DanhSachKhachHangTheoSDT(string sdtkh)
+        {
+            List<clsKhachHang_DTO> lsResult = new List<clsKhachHang_DTO>();
+            string strQuery = "Select * From KhachHang Where TrangThai = 1 and SDTKH = '"+sdtkh+"'";
+            SqlConnection conn = DataProvider.TaoKetNoi();
+            SqlDataReader sdr = DataProvider.TruyVanDuLieu(strQuery, conn);
+            while (sdr.Read())
+            {
+                clsKhachHang_DTO kh_DTO = new clsKhachHang_DTO();
+                kh_DTO.SDTKH = sdr["SDTKH"].ToString();
+                kh_DTO.TenKH = sdr["TenKH"].ToString();
+                kh_DTO.DiaChi = sdr["DiaChi"].ToString();
+                kh_DTO.Email = sdr["Email"].ToString();
+                kh_DTO.GioiTinh = bool.Parse(sdr["GioiTinh"].ToString());
+                kh_DTO.TrangThai = bool.Parse(sdr["TrangThai"].ToString());
+                lsResult.Add(kh_DTO);
+            }
+            sdr.Close();
+            conn.Close();
+            return lsResult;
+        }
+
         public bool ThemKhachHang(clsKhachHang_DTO kh_DTO)
         {
             string strQuery = "Insert Into KhachHang([SDTKH], [TenKH], [DiaChi], [Email], [GioiTinh], [TrangThai]) " +

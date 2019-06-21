@@ -47,7 +47,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="clsChiTietHDNhap_BUS.cs" />
+    <Compile Include="clsChiTietHDXuat_BUS.cs" />
     <Compile Include="clsHoaDonNhap_BUS.cs" />
+    <Compile Include="clsHoaDonXuat_BUS.cs" />
     <Compile Include="clsKhachHang_BUS.cs" />
     <Compile Include="clsLoaiDT_BUS.cs" />
     <Compile Include="clsNhaCungCap_BUS.cs" />

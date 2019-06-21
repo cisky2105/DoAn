@@ -22,3 +22,19 @@ C:\Users\HOANG KHANG\Desktop\DoAnTN\DoAn\DoAnDTDD\BUS\obj\Debug\BUS.Properties.R
 C:\Users\HOANG KHANG\Desktop\DoAnTN\DoAn\DoAnDTDD\BUS\obj\Debug\BUS.csproj.GenerateResource.Cache
 C:\Users\HOANG KHANG\Desktop\DoAnTN\DoAn\DoAnDTDD\BUS\obj\Debug\BUS.exe
 C:\Users\HOANG KHANG\Desktop\DoAnTN\DoAn\DoAnDTDD\BUS\obj\Debug\BUS.pdb
+C:\Users\namop\Desktop\DoAn\BUS\bin\Debug\BUS.exe.config
+C:\Users\namop\Desktop\DoAn\BUS\bin\Debug\BUS.exe
+C:\Users\namop\Desktop\DoAn\BUS\bin\Debug\BUS.pdb
+C:\Users\namop\Desktop\DoAn\BUS\bin\Debug\DAO.exe
+C:\Users\namop\Desktop\DoAn\BUS\bin\Debug\DTO.exe
+C:\Users\namop\Desktop\DoAn\BUS\bin\Debug\DAO.pdb
+C:\Users\namop\Desktop\DoAn\BUS\bin\Debug\DAO.exe.config
+C:\Users\namop\Desktop\DoAn\BUS\bin\Debug\DTO.pdb
+C:\Users\namop\Desktop\DoAn\BUS\bin\Debug\DTO.exe.config
+C:\Users\namop\Desktop\DoAn\BUS\obj\Debug\BUS.csprojAssemblyReference.cache
+C:\Users\namop\Desktop\DoAn\BUS\obj\Debug\BUS.Properties.Resources.resources
+C:\Users\namop\Desktop\DoAn\BUS\obj\Debug\BUS.csproj.GenerateResource.cache
+C:\Users\namop\Desktop\DoAn\BUS\obj\Debug\BUS.csproj.CoreCompileInputs.cache
+C:\Users\namop\Desktop\DoAn\BUS\obj\Debug\BUS.csproj.CopyComplete
+C:\Users\namop\Desktop\DoAn\BUS\obj\Debug\BUS.exe
+C:\Users\namop\Desktop\DoAn\BUS\obj\Debug\BUS.pdb

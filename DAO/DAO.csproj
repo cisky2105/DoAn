@@ -47,7 +47,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="clsChiTietHDNhap_DAO.cs" />
+    <Compile Include="clsChiTietHDXuat_DAO.cs" />
     <Compile Include="clsHoaDonNhap_DAO.cs" />
+    <Compile Include="clsHoaDonXuat_DAO.cs" />
     <Compile Include="clsKhachHang_DAO.cs" />
     <Compile Include="clsLoaiDT_DAO.cs" />
     <Compile Include="clsNhaCungCap_DAO.cs" />

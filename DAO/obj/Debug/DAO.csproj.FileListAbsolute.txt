@@ -18,3 +18,16 @@ C:\Users\HOANG KHANG\Desktop\DoAnTN\DoAn\DoAnDTDD\DAO\obj\Debug\DAO.Properties.R
 C:\Users\HOANG KHANG\Desktop\DoAnTN\DoAn\DoAnDTDD\DAO\obj\Debug\DAO.csproj.GenerateResource.Cache
 C:\Users\HOANG KHANG\Desktop\DoAnTN\DoAn\DoAnDTDD\DAO\obj\Debug\DAO.exe
 C:\Users\HOANG KHANG\Desktop\DoAnTN\DoAn\DoAnDTDD\DAO\obj\Debug\DAO.pdb
+C:\Users\namop\Desktop\DoAn\DAO\bin\Debug\DAO.exe.config
+C:\Users\namop\Desktop\DoAn\DAO\bin\Debug\DAO.exe
+C:\Users\namop\Desktop\DoAn\DAO\bin\Debug\DAO.pdb
+C:\Users\namop\Desktop\DoAn\DAO\bin\Debug\DTO.exe
+C:\Users\namop\Desktop\DoAn\DAO\bin\Debug\DTO.pdb
+C:\Users\namop\Desktop\DoAn\DAO\bin\Debug\DTO.exe.config
+C:\Users\namop\Desktop\DoAn\DAO\obj\Debug\DAO.csprojAssemblyReference.cache
+C:\Users\namop\Desktop\DoAn\DAO\obj\Debug\DAO.Properties.Resources.resources
+C:\Users\namop\Desktop\DoAn\DAO\obj\Debug\DAO.csproj.GenerateResource.cache
+C:\Users\namop\Desktop\DoAn\DAO\obj\Debug\DAO.csproj.CoreCompileInputs.cache
+C:\Users\namop\Desktop\DoAn\DAO\obj\Debug\DAO.csproj.CopyComplete
+C:\Users\namop\Desktop\DoAn\DAO\obj\Debug\DAO.exe
+C:\Users\namop\Desktop\DoAn\DAO\obj\Debug\DAO.pdb

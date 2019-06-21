@@ -15,7 +15,10 @@ namespace BUS
         {
             return kh_DAO.DanhSachKhachHang();
         }
-
+        public List<clsKhachHang_DTO> DanhSachKhachHangTheoSDT(string sdtkh)
+        {
+            return kh_DAO.DanhSachKhachHangTheoSDT(sdtkh);
+        }
         public bool ThemKhachHang(clsKhachHang_DTO kh_DTO)
         {
             return kh_DAO.ThemKhachHang(kh_DTO);
