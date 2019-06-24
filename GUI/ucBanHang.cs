@@ -19,6 +19,7 @@ namespace GUI
         public ucBanHang()
         {
             InitializeComponent();
+            dgvChiTietHoaDon.AutoGenerateColumns = false;
         }
 
         List<clsSanPham_DTO> _lsSanPham = new List<clsSanPham_DTO>();
@@ -33,12 +34,22 @@ namespace GUI
 
         private void ucBanHang_Load(object sender, EventArgs e)
         {
-            dgvChiTietHoaDon.AutoGenerateColumns = false;
             imlSanPham.ColorDepth = ColorDepth.Depth32Bit;
             imlSanPham.ImageSize = new System.Drawing.Size(60, 60);
             lvwSanPham.LargeImageList = imlSanPham;
             btnTruSLM.Enabled = false;
             btnXoaSLM.Enabled = false;
+            txtMaHDXuat.Text = _hdBUS.LayMaTiepTheo();
+            txtMaHDXuat.Enabled = false;
+            txtTenSP.Enabled = false;
+            txtSLTonKho.Enabled = false;
+            txtGiaKM.Enabled = false;
+            txtGiaBan.Enabled = false;
+            cboNhanVien.Enabled = false;
+            cboLoaiDT.Enabled = false;
+            cboNSX.Enabled = false;
+            txtTongTien.Enabled = false;
+            btnTinhTien.Enabled = false;
             LoadDanhSachLoaiDienThoai();
             LoadDanhSachNhanVien();
             LoadDanhSachDienThoai();
@@ -103,11 +114,6 @@ namespace GUI
             cboLoaiDT.DisplayMember = "TenLoaiDT";
             cboLoaiDT.ValueMember = "MaLoaiDT";
         }
-        //private int LoadDanhSachSDTKhachHang()
-        //{
-        //    _khBUS = new clsKhachHang_BUS();
-        //    return _khBUS.DanhSachKhachHangTheoSDT(txtSDTKH.Text);
-        //}
 
         private void LoadDanhSachNhaSanXuat()
         {
@@ -189,73 +195,97 @@ namespace GUI
                 frmXemBaoCao frm = new frmXemBaoCao();
                 frm.InHoaDon(_hoaDon, _lsChiTiet);
                 frm.ShowDialog();
+                _lsChiTiet = new List<clsChiTietHDXuat_DTO>();
+                dgvChiTietHoaDon.DataSource = _lsChiTiet;
+                txtTimTenSP.Clear();
+                txtMaSP.Clear();
+                txtTenSP.Clear();
+                txtGiaBan.Clear();
+                txtGiaKM.Clear();
+                txtSLTonKho.Clear();
+                txtTongTien.Clear();
+                cboNSX.SelectedValue = -1;
+                cboLoaiDT.SelectedValue = -1;
+                txtSDTKH.Clear();
+                pboHinhAnh.Image = null;
+                lvwSanPham.Clear();
+                ucBanHang_Load(sender,e);
             }
         }
 
         private void btnLuuPhieu_Click(object sender, EventArgs e)
         {
-            if (_lsChiTiet.Count > 0)
+            if (txtSDTKH.Text != "")
             {
-                _lsKhachHang = _khBUS.DanhSachKhachHangTheoSDT(txtSDTKH.Text);
-                _hoaDon = new clsHoaDonXuat_DTO();
-                if(_lsKhachHang.Count > 0)
+                if (_lsChiTiet.Count > 0)
                 {
-                    
-                }
-                else
-                {
-                    try
+                    _lsKhachHang = _khBUS.DanhSachKhachHangTheoSDT(txtSDTKH.Text);
+                    _hoaDon = new clsHoaDonXuat_DTO();
+                    if (_lsKhachHang.Count > 0)
                     {
-                        clsKhachHang_DTO khdto = new clsKhachHang_DTO();
-                        khdto.SDTKH = txtSDTKH.Text;
-                        khdto.TenKH = txtSDTKH.Text;
-                        khdto.GioiTinh = false;
-                        khdto.DiaChi = " ";
-                        khdto.Email = " ";
-                        
-                        _khBUS.ThemKhachHang(khdto);
-                    }
-                    catch(Exception ex)
-                    {
-                        MessageBox.Show(ex.Message);
-                    }
-                    //neu khong them
-                    
-                    
-                }
-                _hoaDon.MaHDXuat = _hdBUS.LayMaTiepTheo();
-                _hoaDon.SDTKH = txtSDTKH.Text;
-                _hoaDon.CMNDNV = 123456;
-                //_hoaDon.CMNDNV = ((Form1)this.MdiParent).NhanVienDangNhap.CMNDNV;
-                _hoaDon.TongTien = _lsChiTiet.Sum(o => o.ThanhTien);
-                _hoaDon.NgayXuat = DateTime.Now;
-                try
-                {
-                    if (_hdBUS.LuuHoaDon(_hoaDon))
-                    {
-                        foreach (clsChiTietHDXuat_DTO _cthd in _lsChiTiet)
-                        {
-                            _cthd.MaHDXuat = _hoaDon.MaHDXuat;
 
-                            _cthdBUS.LuuChiTietHoaDon(_cthd);
-                        }
-                        MessageBox.Show("Lưu Hóa Đơn Thành công");
                     }
                     else
                     {
-                        MessageBox.Show("Tạo Hóa Đơn Không Thành Công");
-                    }                                                                                  
-                }
-                catch(Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
-                }
-                
+                        try
+                        {
+                            clsKhachHang_DTO khdto = new clsKhachHang_DTO();
+                            khdto.SDTKH = txtSDTKH.Text;
+                            khdto.TenKH = "no-name";
+                            khdto.GioiTinh = false;
+                            khdto.DiaChi = "no-express";
+                            khdto.Email = "no-name@gmail.com";
 
+                            _khBUS.ThemKhachHang(khdto);
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show(ex.Message);
+                        }
+                        //neu khong them
+
+
+                    }
+                    _hoaDon.MaHDXuat = _hdBUS.LayMaTiepTheo();
+                    _hoaDon.SDTKH = txtSDTKH.Text;
+                    _hoaDon.CMNDNV = 123456;
+                    //_hoaDon.CMNDNV = ((Form1)this.MdiParent).NhanVienDangNhap.CMNDNV;
+                    _hoaDon.TongTien = _lsChiTiet.Sum(o => o.ThanhTien);
+                    _hoaDon.NgayXuat = DateTime.Now;
+                    try
+                    {
+                        if (_hdBUS.LuuHoaDon(_hoaDon))
+                        {
+                            foreach (clsChiTietHDXuat_DTO _cthd in _lsChiTiet)
+                            {
+                                _cthd.MaHDXuat = _hoaDon.MaHDXuat;
+
+                                _cthdBUS.LuuChiTietHoaDon(_cthd);
+                            }
+                            MessageBox.Show("Lưu Hóa Đơn Thành công");
+                            btnTinhTien.Enabled = true;
+                        }
+                        else
+                        {
+                            MessageBox.Show("Tạo Hóa Đơn Không Thành Công");
+                        }
+
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
+
+
+                }
+                else
+                {
+                    MessageBox.Show("Không Có sản Phẩm Nào Để Tạo Hóa Đơn");
+                }
             }
             else
             {
-                MessageBox.Show("Không Có sản Phẩm Nào Để Tạo Hóa Đơn");
+                MessageBox.Show("Bạn chưa nhập số điện thoại khách hàng !!!");
             }
         }
 

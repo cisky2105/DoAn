@@ -73,7 +73,8 @@
             this.cboNhanVien = new System.Windows.Forms.ComboBox();
             this.txtTimTenSP = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.txtMaHDBan = new System.Windows.Forms.TextBox();
+            this.txtMaHDXuat = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvChiTietHoaDon)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudSoLuongMua)).BeginInit();
@@ -229,7 +230,7 @@
             // txtMaSP
             // 
             this.txtMaSP.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtMaSP.Location = new System.Drawing.Point(183, 17);
+            this.txtMaSP.Location = new System.Drawing.Point(186, 27);
             this.txtMaSP.Margin = new System.Windows.Forms.Padding(2);
             this.txtMaSP.Multiline = true;
             this.txtMaSP.Name = "txtMaSP";
@@ -240,7 +241,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(45, 23);
+            this.label6.Location = new System.Drawing.Point(48, 33);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(134, 22);
@@ -252,7 +253,7 @@
             this.btnTinhTien.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnTinhTien.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTinhTien.Image = ((System.Drawing.Image)(resources.GetObject("btnTinhTien.Image")));
-            this.btnTinhTien.Location = new System.Drawing.Point(945, 620);
+            this.btnTinhTien.Location = new System.Drawing.Point(950, 620);
             this.btnTinhTien.Margin = new System.Windows.Forms.Padding(2);
             this.btnTinhTien.Name = "btnTinhTien";
             this.btnTinhTien.Size = new System.Drawing.Size(156, 80);
@@ -267,7 +268,7 @@
             this.btnResetPhieu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnResetPhieu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnResetPhieu.Image = ((System.Drawing.Image)(resources.GetObject("btnResetPhieu.Image")));
-            this.btnResetPhieu.Location = new System.Drawing.Point(1139, 620);
+            this.btnResetPhieu.Location = new System.Drawing.Point(1155, 620);
             this.btnResetPhieu.Margin = new System.Windows.Forms.Padding(2);
             this.btnResetPhieu.Name = "btnResetPhieu";
             this.btnResetPhieu.Size = new System.Drawing.Size(156, 80);
@@ -301,10 +302,10 @@
             this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.txtMaSP);
             this.panel1.Controls.Add(this.label6);
-            this.panel1.Location = new System.Drawing.Point(721, 108);
+            this.panel1.Location = new System.Drawing.Point(721, 142);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(590, 492);
+            this.panel1.Size = new System.Drawing.Size(590, 474);
             this.panel1.TabIndex = 36;
             // 
             // txtTenSP
@@ -448,7 +449,7 @@
             // 
             this.btnTimSanPham.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnTimSanPham.BackgroundImage")));
             this.btnTimSanPham.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnTimSanPham.Location = new System.Drawing.Point(510, 16);
+            this.btnTimSanPham.Location = new System.Drawing.Point(513, 26);
             this.btnTimSanPham.Margin = new System.Windows.Forms.Padding(2);
             this.btnTimSanPham.Name = "btnTimSanPham";
             this.btnTimSanPham.Size = new System.Drawing.Size(33, 28);
@@ -461,7 +462,7 @@
             this.btnLuuPhieu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnLuuPhieu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLuuPhieu.Image = ((System.Drawing.Image)(resources.GetObject("btnLuuPhieu.Image")));
-            this.btnLuuPhieu.Location = new System.Drawing.Point(752, 620);
+            this.btnLuuPhieu.Location = new System.Drawing.Point(748, 620);
             this.btnLuuPhieu.Margin = new System.Windows.Forms.Padding(2);
             this.btnLuuPhieu.Name = "btnLuuPhieu";
             this.btnLuuPhieu.Size = new System.Drawing.Size(156, 80);
@@ -568,28 +569,40 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(27, 108);
+            this.label7.Location = new System.Drawing.Point(18, 108);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(181, 22);
             this.label7.TabIndex = 50;
             this.label7.Text = " Tìm tên sản phẩm:";
             // 
-            // txtMaHDBan
+            // txtMaHDXuat
             // 
-            this.txtMaHDBan.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtMaHDBan.Location = new System.Drawing.Point(905, 76);
-            this.txtMaHDBan.Margin = new System.Windows.Forms.Padding(2);
-            this.txtMaHDBan.Multiline = true;
-            this.txtMaHDBan.Name = "txtMaHDBan";
-            this.txtMaHDBan.Size = new System.Drawing.Size(292, 28);
-            this.txtMaHDBan.TabIndex = 54;
+            this.txtMaHDXuat.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtMaHDXuat.Location = new System.Drawing.Point(855, 102);
+            this.txtMaHDXuat.Margin = new System.Windows.Forms.Padding(2);
+            this.txtMaHDXuat.Multiline = true;
+            this.txtMaHDXuat.Name = "txtMaHDXuat";
+            this.txtMaHDXuat.Size = new System.Drawing.Size(456, 28);
+            this.txtMaHDXuat.TabIndex = 54;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(717, 108);
+            this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(120, 22);
+            this.label13.TabIndex = 55;
+            this.label13.Text = "Mã hóa đơn:";
             // 
             // ucBanHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.txtMaHDBan);
+            this.Controls.Add(this.label13);
+            this.Controls.Add(this.txtMaHDXuat);
             this.Controls.Add(this.txtTimTenSP);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.cboNhanVien);
@@ -663,6 +676,7 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtTenSP;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox txtMaHDBan;
+        private System.Windows.Forms.TextBox txtMaHDXuat;
+        private System.Windows.Forms.Label label13;
     }
 }
