@@ -40,7 +40,6 @@ namespace GUI
             btnTruSLM.Enabled = false;
             btnXoaSLM.Enabled = false;
             LoadDanhSachLoaiDienThoai();
-            
             LoadDanhSachNhanVien();
             LoadDanhSachDienThoai();
             LoadDanhSachNhaSanXuat();

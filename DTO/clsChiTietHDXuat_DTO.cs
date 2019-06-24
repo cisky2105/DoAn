@@ -14,16 +14,78 @@ namespace DTO
         private int _DonGia;
         private int _GiaKM;
 
-        public string MaHDXuat { get => _MaHDXuat; set => _MaHDXuat = value; }
-        public string MaSP { get => _MaSP; set => _MaSP = value; }
-        public int SoLuong { get => _SoLuong; set => _SoLuong = value; }
-        public int DonGia { get => _DonGia; set => _DonGia = value; }
-        public int GiaKM { get => _GiaKM; set => _GiaKM = value; }
+       
+       
+
+        public string MaHDXuat
+        {
+            get
+            {
+                return _MaHDXuat;
+            }
+
+            set
+            {
+                _MaHDXuat = value;
+            }
+        }
+
+        public string MaSP
+        {
+            get
+            {
+                return _MaSP;
+            }
+
+            set
+            {
+                _MaSP = value;
+            }
+        }
+
+        public int SoLuong
+        {
+            get
+            {
+                return _SoLuong;
+            }
+
+            set
+            {
+                _SoLuong = value;
+            }
+        }
+
+        public int DonGia
+        {
+            get
+            {
+                return _DonGia;
+            }
+
+            set
+            {
+                _DonGia = value;
+            }
+        }
+
+        public int GiaKM
+        {
+            get
+            {
+                return _GiaKM;
+            }
+
+            set
+            {
+                _GiaKM = value;
+            }
+        }
         public int ThanhTien
         {
             get
             {
-                return ((_SoLuong * _DonGia) - (_SoLuong * _GiaKM));
+                return ((SoLuong * DonGia) - (SoLuong * GiaKM));
             }
         }
     }

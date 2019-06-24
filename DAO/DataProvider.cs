@@ -12,7 +12,7 @@ namespace DAO
     {
         private static SqlDataAdapter adapter = new SqlDataAdapter();
         //private static SqlConnection conn = new SqlConnection(@"Data Source=CISKY\SQLEXPRESS;Initial Catalog=QL_CuaHangDTDD;Integrated Security=True");
-        private static SqlConnection conn = new SqlConnection(@"Data Source=desktop-t6be0a0;Initial Catalog=QL_CuaHangDTDD;Integrated Security=True");
+        private static SqlConnection conn = new SqlConnection(@"Data Source=DESKTOP-T6BE0A0\SQLEXPRESS;Initial Catalog=QL_CuaHangDTDD;Integrated Security=True");
 
         public static SqlConnection TaoKetNoi()
         {
